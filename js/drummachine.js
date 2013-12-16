@@ -2,7 +2,6 @@ $(document).ready(function () {
     // get all files and fill the samples hasmap
     var activeKit="ac"; // the samples kit we're using
     var samplesHash = {};
-    var i = 0;
     var numMeasures = 4;
     var numBeats = 4;
     var numTracks = 0;
@@ -14,7 +13,8 @@ $(document).ready(function () {
     var bpm = 240;
     var maxBpm = 600;
     var solo = -1;
-    
+    var preloadAmount = 0;
+    var preloaded= 0;
     // PLAYER FUNCTIONS
     var play = function(index){
         $('#playlist audio').get(index).play();
@@ -25,22 +25,16 @@ $(document).ready(function () {
         $('#beatDigit').html((currBeat+1));
     };
     var updateBpmDisplay = function(){
-        /*
-        hundreds = parseInt(bpm/100);
-        decs = parseInt( (bpm - 100* hundreds)/10 );
-        units = parseInt( (bpm - 100* hundreds - 10*decs) );
-        $('#bpm100').html((hundreds));
-        $('#bpm10').html(decs);
-        $('#bpm1').html(units);
-        */
         $('#tempoDisplay').val(bpm);
     };
     
     // HTML fill
     updateBeatDisplay();
     updateBpmDisplay();
+    var i = 0;
     $.each($('audio'), function() {
        samplesHash[$(this).attr('data-sound')] = i;
+       // insert preload code here
        i++;
     });
     // Fill tracks
