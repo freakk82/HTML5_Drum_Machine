@@ -90,6 +90,7 @@ $(document).ready(function () {
     
     $('.solo').click(function() {
         trk= $(this).attr('data-soloID');
+        sndId = samplesHash[$('#track_'+trk).attr('data-sound')];
         $(this).toggleClass('grey');
         $(this).toggleClass('green');
         if(solo<0) solo = trk; // no other tracks where in solo mode
@@ -116,8 +117,8 @@ $(document).ready(function () {
         } else{
             if($('#track_'+solo+' #m'+measure+'-b'+beat).hasClass('active')){
                 snd = samplesHash[$('#track_'+solo).attr('data-sound')];
-                $('#samples audio').get(solo).currentTime = 0;
-                $('#samples audio').get(solo).play();
+                $('#samples audio').get(snd).currentTime = 0;
+                $('#samples audio').get(snd).play();
             }
         }
      };
