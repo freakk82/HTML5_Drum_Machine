@@ -1,0 +1,184 @@
+@import url(http://fonts.googleapis.com/css?family=Iceland);
+@import url('fonts/font-awesome-4.0.3/css/font-awesome.min.css');
+@font-face
+{
+    font-family: Led;
+    src: url('fonts/digital-7.ttf');
+}
+
+body{
+ background: #999;
+ font-family: 'Iceland', cursive;
+ color: white;
+}
+
+#container{
+    position: relative;
+    margin: auto;
+    top:20px;
+    width:900px;
+    /* height:500px; */
+    border: 1px solid #454545;
+    padding:10px;
+    border-radius: 8px;
+    box-shadow: 6px 6px 10px #111;
+    cursor: pointer;
+    background: #777e84; /* Old browsers */
+    background: -moz-linear-gradient(left,  #777e84 0%, #222222 2%, #000000 96%, #777e84 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#777e84), color-stop(2%,#222222), color-stop(96%,#000000), color-stop(100%,#777e84)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #777e84 0%,#222222 2%,#000000 96%,#777e84 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #777e84 0%,#222222 2%,#000000 96%,#777e84 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #777e84 0%,#222222 2%,#000000 96%,#777e84 100%); /* IE10+ */
+    background: linear-gradient(to right,  #777e84 0%,#222222 2%,#000000 96%,#777e84 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#777e84', endColorstr='#777e84',GradientType=1 ); /* IE6-9 */
+}
+.area{
+    /* border: 1px solid #999; 
+    border-radius: 8px;*/
+    padding: 8px;
+    margin-bottom: 4px;
+}
+#transport_area{ 
+    max-width: 100%;
+}
+#transport_bar .buttonContainer{
+    float:left;
+    margin-top: 6px;
+}
+#logo_area {
+    position: absolute;
+    top:0;
+    right:0;
+    padding-right: 45px;
+    padding-top: 20px;
+    margin-bottom: 4px;
+    text-align:right;
+    float:right ; 
+    /*   */
+    /* height: 40px; */
+    overflow:hidden;
+}
+#logo_area img{ /* max-width: 50px; */ max-height: 40px;} 
+img#HTML5_logo {opacity:0.6;}
+img#freakk_logo {opacity:0.6;}
+#transport_bar{
+    padding-left: 100px;
+    padding-right: 100px;
+    width:880px;
+    height:40px;
+    margin: auto;
+   /* border: 1px solid red; */
+    margin-bottom: 4px;
+}
+#transport_bar.button{
+    font-family: "Font-Awesome";
+}
+/* #play_btn{ background: green;}
+#pause_btn{ background: orange;}
+#stop_btn{ background: blue;}
+#led{background:red; opacity:0.5;}
+ */
+label{
+    float:left;
+    font-size: 14px;
+    margin-left:12px;
+    margin-right:2px;
+}
+.display{
+    float:left;
+    margin:4px;
+    height: 26px;
+    padding-top:2px;
+    vertical-align:middle;
+    border: 1px inset #444;
+    font-family: "Led";
+    font-size: 25px;
+    color: #0AC2FF;
+    text-shadow: 0 0 2px 2px #ADEBFF;
+    background: #000;
+    text-align:center;
+}
+.miniButonsVertical{
+    float:left;
+    margin:2px;
+    width: 28px;
+    height: 28px;
+}
+.miniButton{
+    float:left;
+    margin:1px;
+    width: 28px;
+    height: 13px;
+    text-align: center;
+    vertical-align:top;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background: #797A7A;
+}
+.miniButton i{ font-size: 10px;  line-height:10px;  }
+.digit{
+    float:left;
+    width: 24px;
+}
+#colonDigit{ width: 8px; }
+#tempoDisplay{ width: 60px;}
+/* SEQUENCER TRACKS */
+.track{
+    width: 880px;
+    height: 37px;
+    margin: auto;
+    border-bottom: 1px solid #121212;
+    box-shadow: 0 1px #2A2A2A;
+    margin-bottom: 4px;
+    padding-top: 5px;
+}
+#beat_bar{
+    width:880px;
+    height:20px;
+    margin: auto;
+    /* border: 1px solid blue; */
+    margin-bottom: 4px;
+}
+
+.track .trackTitle{
+    float: left;
+    width: 100px;
+    height: 28px;
+    padding-top: 12px;
+    text-align: left;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 14px;
+    text-indent:8px;
+}
+
+.button{
+    float:left;
+    margin:4px;
+    width: 28px;
+    height: 22px;
+    padding-top:6px;
+    text-align: center;
+    vertical-align:middle;
+    border: 1px solid grey;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    background: #000000; /* fallback for non-supporting browsers */  
+    background-image: -webkit-gradient(radial, center center, 0, center center, 141, from(#9C9C9C), to(#797A7A)); /* old WebKit Syntax */  
+    background-image: -webkit-radial-gradient(center center, circle contain, #9C9C9C 0%, #797A7A 100%); /* New WebKit syntax */  
+    background-image: -moz-radial-gradient(center center, circle contain, #9C9C9C 0%, #797A7A 100%);  
+    background-image: -ms-radial-gradient(center center, circle contain, #9C9C9C 0%, #797A7A 100%); /* IE10+ */  
+    background-image: -o-radial-gradient(center center, circle contain, #9C9C9C 0%, #797A7A 100%); /* Opera (13?) */ 
+    
+}
+
+.spacer{
+    float:left;
+    width: 2px;
+    height: 22px;
+    padding-top:6px;
+    margin:4px;
+    border-left: 1px solid #121212;
+    box-shadow: -1px 0px #2A2A2A;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML5 Drum Machine</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/drummachine.js"></script>
+  </head>
+  <body>
+    <div id="samples">
+        <audio id="ac_bd" src="audio/acoustic/bd.wav" data-sound="bd"  type="audio/wav" preload="auto" />
+        <audio id="ac_sn_h" src="audio/acoustic/sn_h.wav" data-sound="sn_h" type="audio/wav" preload="auto" />
+        <audio id="ac_sn_rim" src="audio/acoustic/sn_rim.wav" data-sound="sn_rim" type="audio/wav" preload="auto" />
+        <audio id="ac_ride_a" src="audio/acoustic/ride_a.wav" data-sound="ride_a" type="audio/wav" preload="auto" />
+        <audio id="ac_ride_bell" src="audio/acoustic/ride_bell.wav" data-sound="ride_bell" type="audio/wav" preload="auto" />
+        <audio id="ac_hh_closed" src="audio/acoustic/hh_closed.wav" data-sound="hh_closed" type="audio/wav" preload="auto" />
+        <audio id="ac_hh_open" src="audio/acoustic/hh_open.wav" data-sound="hh_open" type="audio/wav" preload="auto" />
+    </div>
+    
+    <div id="container">
+
+        <div class="area" id="transport_area">
+            <div id="transport_bar">
+                <div class="buttonContainer">
+                    <a class="button regular green" id="play_btn" ><i class="fa fa-play"></i></a>
+                    <a class="button regular orange" id="pause_btn" ><i class="fa fa-pause"></i></a>
+                    <a class="button regular blue" id="stop_btn" ><i class="fa fa-stop"></i></a>
+                </div> <!-- /#buttonContainer -->
+                <label>Bar/Beat</label>
+                <div class="display" id="beatDisplay">
+                    <div class="digit" id="measureDigit"></div>
+                    <div class="digit" id="colonDigit"></div>
+                    <div class="digit" id="beatDigit"></div>
+                </div> <!-- /#beatDisplay -->
+                <label>Tempo</label>
+                <input class="display" id="tempoDisplay" size=3>
+
+                </input> <!-- /#beatDisplay -->
+                <div class="buttonContainer">
+                    <div class="button grey" id="tempo_plus"><i class="fa fa-plus"></i></div>
+                    <div class="button grey" id="tempo_minus"><i class="fa fa-minus"></i></div>
+                </div> <!-- /#buttonContainer -->
+            </div> <!-- /#transport_bar -->
+        </div> <!-- /area -->
+        
+        <div id="logo_area">
+            <img src="img/freakk_logo_white.svg" id="freakk_logo"/>
+            <img src="img/HTML5_logo_white.svg" id="HTML5_logo"/>
+            
+        </div>
+        <div class="area">
+            <div id="beat_bar"></div>
+            <div class="track" id="track_0" data-sound="bd"  data-trackName="BD"></div>
+            <div class="track" id="track_1" data-sound="sn_h"  data-trackName="Snare"></div>
+            <div class="track" id="track_2" data-sound="sn_rim"  data-trackName="Snare Rim"></div>
+            <div class="track" id="track_3" data-sound="hh_closed" data-trackName="HH-Closed"></div>
+            <div class="track" id="track_4" data-sound="hh_open"  data-trackName="HH-Open"></div>
+            <div class="track" id="track_5" data-sound="ride_a"  data-trackName="Ride"></div>
+            <div class="track" id="track_6" data-sound="ride_bell"  data-trackName="Ride Bell"></div>
+        </div> <!-- /area -->
+        
+        
+    </div>
+  </body>
+</html>

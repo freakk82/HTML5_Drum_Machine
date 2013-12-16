@@ -1,0 +1,100 @@
+#container{
+    margin: auto;
+    top:20px;
+    width:900px;
+    height:500px;
+    border: 2px solid #454545;
+    padding:10px;
+}
+.transport_bar{
+    width:880px;
+    height:40px;
+    margin: auto;
+    border: 1px solid red;
+    margin-bottom: 4px;
+}
+.transport_btn{
+    float:left;
+    margin:4px;
+    width: 28px;
+    height: 22px;
+    padding-top:6px;
+    text-align: center;
+    vertical-align:middle;
+    border: 1px solid grey;
+}
+#play_btn{ background: green;}
+#pause_btn{ background: orange;}
+#stop_btn{ background: blue;}
+#led{background:red; opacity:0.5;}
+#led.on{opacity:1;}
+
+#beatDisplay{
+    float:left;
+    margin:4px;
+    width: 100px;
+    height: 22px;
+    padding-top:6px;
+    text-align: center;
+    vertical-align:middle;
+    border: 1px solid grey;
+}
+
+/* SEQUENCER TRACKS */
+.track{
+    width:880px;
+    height:40px;
+    margin: auto;
+    border: 1px solid blue;
+    margin-bottom: 4px;
+}
+
+.track .trackTitle{
+    float: left;
+    width: 100px;
+    height: 28px;
+    padding-top: 12px;
+    text-align: left;
+    overflow: hidden;
+    border-right: 1px solid grey;
+    font-size: 14px;
+    line-height: 14px;
+    text-indent:8px;
+
+}
+
+.button{
+    float:left;
+    margin:4px;
+    width: 28px;
+    height: 22px;
+    padding-top:6px;
+    text-align: center;
+    vertical-align:middle;
+    border: 1px solid grey;
+}
+
+.button.mute{
+    background-color: red;
+}
+
+.button.solo{
+    background-color: blue;
+}
+
+.button.beat{
+  background-color: grey;
+}
+
+.button.beat.active{
+  background-color: orange;
+  box-shadow: 0 0 10px yellow;
+}
+.beat_spacer{
+    float:left;
+    width: 2px;
+    height: 22px;
+    padding-top:6px;
+    margin:4px;
+    background:orange;
+}
