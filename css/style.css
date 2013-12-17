@@ -79,9 +79,9 @@ background-position:fixed;
     margin-bottom: 4px;
     text-align:right;
     float:right ; 
-    /*   */
-    /* height: 40px; */
     overflow:hidden;
+    width: 120px;
+    max-height: 50px;
 }
 #logo_area img{ /* max-width: 50px; */ max-height: 40px;} 
 img#HTML5_logo {opacity:0.6;}
